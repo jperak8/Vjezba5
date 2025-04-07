@@ -41,4 +41,9 @@ public class Pas extends Zivotinja{
         return "trci";
     }
 
+    @Override
+    public String toString() {
+        return "\nPas podaci \n" + "pasmina: " + getPasmina() + " jel šampion? " + isSampion() + " brzina trčanja: " + getBrzinaTrcanja();
+    }
+
 }

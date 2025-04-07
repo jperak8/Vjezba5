@@ -18,22 +18,30 @@ public class Main {
         Ptica ptica = new Ptica("Roda", true, 52.83);
         System.out.println("Ptica se kreće na slijedeći način: " + ptica.kreceSe());
 
-        Riba riba = new Riba(2.63, 5.93, false);
+        Riba riba = new Riba("plava riba", 2.63, 5.93, false);
         System.out.println("Riba se kreće na slijedeći način: " + riba.kreceSe());
 
-        ArrayList<Zivotinja> ljubimci = new ArrayList<>();
-        ljubimci.add(pas);
-        ljubimci.add(ptica);
-        ljubimci.add(riba);
+        Pas pasDrugi = new Pas("Pit bull", false, 19.27);
+        Ptica pticaDruga = new Ptica("Lastavica", true, 6.48);
+        Riba ribaDruga = new Riba("šaran", 5.73, 8.62, true);
 
-        //Adresa ivanovaAdresa = new Adresa("Hrvatska", "Valpovo", 31550, "Kraljevci", "8b");
+        ArrayList<Zivotinja> ljubimciProfesor = new ArrayList<>();
+        ljubimciProfesor.add(pas);
+        ljubimciProfesor.add(ptica);
+        ljubimciProfesor.add(riba);
 
-        Profesor profesor = new Profesor(130299035342L, ljubimci, "FERIT", "Ivan", "Horvat", "Hrvatska", "Valpovo", 31550, "Kraljevci", "8b",  "Elektronika");
+        ArrayList<Zivotinja> ljubimciStudent = new ArrayList<>();
+        ljubimciStudent.add(pasDrugi);
+        ljubimciStudent.add(pticaDruga);
+        ljubimciStudent.add(ribaDruga);
+
+        Profesor profesor = new Profesor("Ivan", "Horvat", "Hrvatska", "Valpovo", 31550, "Kraljevci", "8b", 130299035342L, "FERIT", "Elektronika", ljubimciProfesor);
         System.out.println("Metoda predaje klase Profesor vraća: " + profesor.predaje());
         System.out.println(profesor.toString());
 
-//        Student student = new Student("EFOS", 1302990300011L, 3);
-//        System.out.println("Metoda spava klase Student vraća: " + student.spava());
+        Student student = new Student("Marko", "Marić", 3, "Hrvatska", "Valpovo", 31550, "Braće Radića", "39", 58731820022L, 110699035782L, "EFOS", ljubimciStudent);
+        System.out.println("Metoda spava klase Student vraća: " + student.spava());
+        System.out.println(student.toString());
 
     }
 

@@ -8,7 +8,7 @@ public class Profesor extends Osoba implements Radnja {
 
     private String kolegij;
 
-    public Profesor(long OIB, ArrayList<Zivotinja> ljubimci, String fakultet, String ime, String prezime, String drzava, String mjesto, int postanskiBroj, String ulica, String kucniBroj, String kolegij) {
+    public Profesor(String ime, String prezime, String drzava, String mjesto, int postanskiBroj, String ulica, String kucniBroj, long OIB, String fakultet, String kolegij, ArrayList<Zivotinja> ljubimci) {
         super(OIB, ljubimci, fakultet, ime, prezime, drzava, mjesto, postanskiBroj, ulica, kucniBroj);
         this.kolegij = kolegij;
     }
@@ -27,7 +27,7 @@ public class Profesor extends Osoba implements Radnja {
 
     @Override
     public String toString(){
-        return  "OIB: " + getOIB() + " ljubimci: " + getLjubimci() + " fakultet: " + getFakultet() + " ime: " + getIme() + " prezime: " + getPrezime() + " država: " + getDrzava() + " mjesto: " + getMjesto() + " poštanski broj: " + getPostanskiBroj() + " ulica: " + getUlica() + " kućni broj: " + getKucniBroj() + " kolegij: " + getKolegij();
+        return "Podaci profesora su: \n" +  " ime: " + getIme() + " prezime: " + getPrezime() + " država: " + getDrzava() + " mjesto: " + getMjesto() + " poštanski broj: " + getPostanskiBroj() + " ulica: " + getUlica() + " kućni broj: " + getKucniBroj() + " OIB: " + getOIB() + " fakultet: " + getFakultet() + " kolegij: " + getKolegij() +  " \nljubimci profesora: " + getLjubimci() ;
     }
 
 }

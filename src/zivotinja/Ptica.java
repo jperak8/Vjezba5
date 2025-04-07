@@ -41,4 +41,9 @@ public class Ptica extends Zivotinja {
         return "leti";
     }
 
+    @Override
+    public String toString() {
+        return "\nPtica podaci \n" + "vrsta: " + getVrstaPtice() + " raspon krila " + getRasponKrila() + " ide li zimi na jug? " + isJelIdeNaJugZimi();
+    }
+
 }

@@ -9,7 +9,7 @@ public class Student extends Osoba {
     private long JMBAG;
     private int godinaStudiranja;
 
-    public Student(long OIB, ArrayList<Zivotinja> ljubimci, String fakultet, String ime, String prezime, long JMBAG, int godinaStudiranja, String drzava, String mjesto, int postanskiBroj, String ulica, String kucniBroj) {
+    public Student(String ime, String prezime, int godinaStudiranja, String drzava, String mjesto, int postanskiBroj, String ulica, String kucniBroj, long OIB, long JMBAG, String fakultet, ArrayList<Zivotinja> ljubimci) {
         super(OIB, ljubimci, fakultet, ime, prezime, drzava,  mjesto, postanskiBroj, ulica, kucniBroj);
         this.JMBAG = JMBAG;
         this.godinaStudiranja = godinaStudiranja;
@@ -38,6 +38,11 @@ public class Student extends Osoba {
     @Override
     public String spava() {
         return "spava 10 sati";
+    }
+
+    @Override
+    public String toString(){
+        return "Podaci studenta su: \n" + " ime: " + getIme() + " prezime: " + getPrezime() + " država: " + getDrzava() + " mjesto: " + getMjesto() + " poštanski broj: " + getPostanskiBroj() + " ulica: " + getUlica() + " kućni broj: " + getKucniBroj() + " OIB: " + getOIB() + " fakultet: " + getFakultet() + " kolegij: " + " \nljubimci studenta: " + getLjubimci();
     }
 
 }
