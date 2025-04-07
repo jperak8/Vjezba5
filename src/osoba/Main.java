@@ -35,11 +35,11 @@ public class Main {
         ljubimciStudent.add(pticaDruga);
         ljubimciStudent.add(ribaDruga);
 
-        Profesor profesor = new Profesor("Ivan", "Horvat", "Hrvatska", "Valpovo", 31550, "Kraljevci", "8b", 130299035342L, "FERIT", "Elektronika", ljubimciProfesor);
+        Profesor profesor = new Profesor("Ivan", "Horvat", 130299035342L, "FERIT", "Elektronika", ljubimciProfesor);
         System.out.println("Metoda predaje klase Profesor vraća: " + profesor.predaje());
         System.out.println(profesor.toString());
 
-        Student student = new Student("Marko", "Marić", 3, "Hrvatska", "Valpovo", 31550, "Braće Radića", "39", 58731820022L, 110699035782L, "EFOS", ljubimciStudent);
+        Student student = new Student("Marko", "Marić", 3, 58731820022L, 110699035782L, "EFOS", ljubimciStudent);
         System.out.println("Metoda spava klase Student vraća: " + student.spava());
         System.out.println(student.toString());
 

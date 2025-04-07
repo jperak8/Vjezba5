@@ -56,4 +56,9 @@ public class Adresa {
         this.kucniBroj = kucniBroj;
     }
 
+    @Override
+    public String toString(){
+        return "Podaci adrese su: \n" + " država: " + getDrzava() + " mjesto: " + getMjesto() + " poštanski broj: " + getPostanskiBroj() + " ulica: " + getUlica() + " kućni broj: " + getKucniBroj();
+    }
+
 }

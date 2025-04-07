@@ -4,7 +4,7 @@ import zivotinja.Zivotinja;
 
 import java.util.ArrayList;
 
-public abstract class Osoba extends Adresa implements Radnja {
+public abstract class Osoba implements Radnja {
 
     private long OIB;
     private String ime;
@@ -13,13 +13,13 @@ public abstract class Osoba extends Adresa implements Radnja {
     private String fakultet;
     ArrayList<Zivotinja> ljubimci;
 
-    public Osoba(long OIB, ArrayList<Zivotinja> ljubimci, String fakultet, String ime, String prezime, String drzava, String mjesto, int postanskiBroj, String ulica, String kucniBroj) {
-        super(drzava, mjesto, postanskiBroj, ulica, kucniBroj);
+    public Osoba(long OIB, ArrayList<Zivotinja> ljubimci, String fakultet, String ime, String prezime, Adresa adresa) {
         this.OIB = OIB;
         this.ljubimci = ljubimci;
         this.fakultet = fakultet;
         this.ime = ime;
         this.prezime = prezime;
+        this.adresa = adresa;
     }
 
     public long getOIB() {
